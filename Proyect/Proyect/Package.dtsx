@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{EA4A7B09-DDD9-4D1B-AFC5-7A875A2BA7E0}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{A35C7590-1BDB-4610-B0A6-81F789C6AC81}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -46,7 +46,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALC/oU66LFk6+c+VoztNp5QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC1Xavte3BK6BmOAL90cKfVUmDrSPvTYW4nK4v27q4SpAAAAAAOgAAAAAIAACAAAAB0Xzvig9zep7agHendYHtvvDDeJPuJakfhskX3Zw1/nhAAAACU5QxHE29P5v13DRMdssbsQAAAAPhjrjJ5ZB6VRCs88UvKabuNqPCbujyCQO0WzF9LsAzE/3ppkGcnw8d2KgjQkHfTWfXNP/QEpPvfDHrPd47Wr9M</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALC/oU66LFk6+c+VoztNp5QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC7c6t5YmdivN+XNuSkyx6kojhXJPwy8XYty+GgxFqo9gAAAAAOgAAAAAIAACAAAAABJNowGG2SYugNJvmmg3ED3avSUTRtUANbAvrlEMIm5xAAAACjJ7O+Eox+YyJ4E2dAj1uZQAAAAA1/47GdgQZEKH6mLl2teFitjrRl5bQ4yJJFjDYQj4RpvyvjNOjzae+q8ZqOVlMxRw02WauDDdT/l5PAtNrWlIg</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -82,6 +82,15 @@
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7C3F05F4-9F88-4F26-9465-0FA066FA766B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Quotes">
+      <DTS:VariableValue
+        DTS:DataType="8">"</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -372,6 +381,26 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Execute Process Task"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{B4493908-1CB7-4C1E-84AB-18B2235C120C}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Process Task"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Arguments">"rar e -p"+ @[User::Quotes] +@[User::FilePassword]+ @[User::Quotes] +" *.*"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Program Files\WinRAR\WinRAR.exe"
+          Arguments="rar e -p&quot;&quot; *.*"
+          WorkingDirectory="C:\AM" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Foreach Loop Container"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
@@ -455,6 +484,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\FTP Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{7B66A1E8-6D1F-4BA1-894A-47A8F7E08599}"
+      DTS:From="Package\FTP Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Execute Process Task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -519,6 +556,32 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Execute Process Task"
+          TopLeft="246,342" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="338.25,305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
