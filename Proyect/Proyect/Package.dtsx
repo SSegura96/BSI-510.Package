@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{A35C7590-1BDB-4610-B0A6-81F789C6AC81}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{89F2F9E1-63B6-4A81-A958-5C6FF8F41634}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,6 +25,116 @@
         <DTS:ConnectionManager
           DTS:FileUsageType="2"
           DTS:ConnectionString="C:\AM" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CustomFlatManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D591AD1B-3A43-411C-A374-398720D874B8}"
+      DTS:ObjectName="CustomFlatManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\AM\201711231050.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{906282A4-C0A4-4BCF-8216-E48918C9F881}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderDetailID"
+              DTS:DTSID="{6DF33C37-0C85-4E35-9A84-F8E802345C09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CarrierTrackingNumber"
+              DTS:DTSID="{D4A59B50-C115-41FD-9523-A04A3C292DF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQty"
+              DTS:DTSID="{0302A81F-2B4A-4F84-A5DC-9E9AFC08A3BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{B882E478-C5D6-4B7A-854F-1159C488B14B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpecialOfferID"
+              DTS:DTSID="{21FE11F8-0407-4B35-9025-4C0358556946}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{216B890F-5567-4EE7-89DD-025691132F3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPriceDiscount"
+              DTS:DTSID="{2DC07D77-C3C8-42A2-8669-1D70531EFE0B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LineTotal"
+              DTS:DTSID="{6A98AF04-9062-433B-AB04-F68B66DC6853}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rowguid"
+              DTS:DTSID="{C65C567C-8E9C-4EEA-BB6F-B316D9D8FD52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="145"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ModifiedDate"
+              DTS:DTSID="{0548D049-EBFB-48D3-89C7-565ABD5A4BD8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -42,11 +152,12 @@
         <DTS:ConnectionManager
           DTS:ConnectionString=":21">
           <DTS:FtpConnection
-            DTS:ServerName="">
+            DTS:ServerName=""
+            DTS:TimeOut="200">
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALC/oU66LFk6+c+VoztNp5QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC7c6t5YmdivN+XNuSkyx6kojhXJPwy8XYty+GgxFqo9gAAAAAOgAAAAAIAACAAAAABJNowGG2SYugNJvmmg3ED3avSUTRtUANbAvrlEMIm5xAAAACjJ7O+Eox+YyJ4E2dAj1uZQAAAAA1/47GdgQZEKH6mLl2teFitjrRl5bQ4yJJFjDYQj4RpvyvjNOjzae+q8ZqOVlMxRw02WauDDdT/l5PAtNrWlIg</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALC/oU66LFk6+c+VoztNp5QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAxvZUEg14WP4m22i035OAfIGShM5B3vbUXzIIrrL8oTwAAAAAOgAAAAAIAACAAAAAng+2HHmSZPM7eP7omHtpFuPO5DBTDxeDe8MmAydf0IhAAAAATMqBFCbho+NKjikW/JBIkQAAAAIGmwH/LPH2MOHcI9PiuRncWit/yyX5DTLKVJpHGTT8K0ElK4ShIUwr7+P0mraSZdnIl250IKxIgns/5q+MwlEg</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -65,6 +176,16 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{1F9A0D8F-32F9-4A91-970F-E61D79C31B7F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{6E1E17B2-45B0-4FEC-B25F-A49A7EE22D05}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
@@ -75,6 +196,15 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{04B97452-664F-4333-95C3-BFBF69FDA909}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FolderPath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\AM\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{C084E8D8-225C-4C81-B9F5-C2F5C8ACFF13}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
@@ -82,15 +212,6 @@
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{7C3F05F4-9F88-4F26-9465-0FA066FA766B}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="Quotes">
-      <DTS:VariableValue
-        DTS:DataType="8">"</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -122,6 +243,24 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{0F3C0D17-9146-484F-AC98-02EFE61A28E9}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TimeFinish">
+      <DTS:VariableValue
+        DTS:DataType="7">11/24/2017 12:30:36 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7FFE988A-3682-4561-8650-7E5DFA456F5C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TimeStart">
+      <DTS:VariableValue
+        DTS:DataType="7">11/24/2017 12:30:22 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{1FC2E694-EE2D-45C2-8BF3-F708983CEBB9}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
@@ -133,281 +272,13 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{8C39930B-5EAC-4379-937B-F59776F7E37A}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Data Flow Task\ADO NET Source"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
-              name="ADO NET Source"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement used by the component to extract data."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
-                  name="AllowImplicitStringConversion">true</property>
-                <property
-                  dataType="System.String"
-                  description="The Source database table name."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Parameters"</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specify the mode to retrieve external column information"
-                  name="AccessMode"
-                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\ADO NET Source.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[W10-RKOCH3196-M.AM]"
-                  connectionManagerRefId="Package.ConnectionManagers[W10-RKOCH3196-M.AM]"
-                  description="Managed connection manager"
-                  name="IDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output]"
-                  name="ADO NET Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[ID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ID]"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[ID]"
-                      name="ID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Server]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Server]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Server]"
-                      name="Server"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[User]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[User]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[User]"
-                      name="User"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Password]"
-                      dataType="nText"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Password]"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Password]"
-                      name="Password"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[FilePassword]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FilePassword]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[FilePassword]"
-                      name="FilePassword"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Server]"
-                      dataType="wstr"
-                      length="50"
-                      name="Server" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[User]"
-                      dataType="wstr"
-                      length="50"
-                      name="User" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Password]"
-                      dataType="nText"
-                      name="Password" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FilePassword]"
-                      dataType="wstr"
-                      length="50"
-                      name="FilePassword" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output]"
-                  isErrorOut="true"
-                  name="ADO NET Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ID]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ID]"
-                      name="ID" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Server]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Server]"
-                      name="Server" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[User]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[User]"
-                      name="User" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Password]"
-                      dataType="nText"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Password]"
-                      name="Password" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FilePassword]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FilePassword]"
-                      name="FilePassword" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Recordset Destination"
-              componentClassID="Microsoft.RecordsetDestination"
-              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
-              name="Recordset Destination">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the recordset."
-                  name="VariableName">User::Table</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Recordset Destination.Inputs[Recordset Destination Input]"
-                  hasSideEffects="true"
-                  name="Recordset Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Recordset Destination.Inputs[Recordset Destination Input].Columns[Server]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Server"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Server]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Recordset Destination.Inputs[Recordset Destination Input].Columns[User]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="User"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[User]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Recordset Destination.Inputs[Recordset Destination Input].Columns[Password]"
-                      cachedDataType="nText"
-                      cachedName="Password"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Password]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Recordset Destination.Inputs[Recordset Destination Input].Columns[FilePassword]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="FilePassword"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[FilePassword]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Data Flow Task.Paths[ADO NET Source Output]"
-              endId="Package\Data Flow Task\Recordset Destination.Inputs[Recordset Destination Input]"
-              name="ADO NET Source Output"
-              startId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Execute Process Task"
-      DTS:CreationName="Microsoft.ExecuteProcess"
-      DTS:Description="Execute Process Task"
-      DTS:DTSID="{B4493908-1CB7-4C1E-84AB-18B2235C120C}"
-      DTS:ExecutableType="Microsoft.ExecuteProcess"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute Process Task"
-      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:PropertyExpression
-        DTS:Name="Arguments">"rar e -p"+ @[User::Quotes] +@[User::FilePassword]+ @[User::Quotes] +" *.*"</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <ExecuteProcessData
-          Executable="C:\Program Files\WinRAR\WinRAR.exe"
-          Arguments="rar e -p&quot;&quot; *.*"
-          WorkingDirectory="C:\AM" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Foreach Loop Container"
+      DTS:refId="Package\Coloca cada valor en una variable"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
       DTS:DTSID="{4E542A33-18ED-48DF-9D52-5DF255005DA9}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Foreach Loop Container">
+      DTS:ObjectName="Coloca cada valor en una variable">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachADOEnumerator"
         DTS:DTSID="{A91B927D-5BCC-4646-ABDB-1A417A2E0E26}"
@@ -448,13 +319,885 @@
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\FTP Task"
+      DTS:refId="Package\Extrae los archivos comprimidos"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{B4493908-1CB7-4C1E-84AB-18B2235C120C}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extrae los archivos comprimidos"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Arguments">" x *.* -p" + @[User::FilePassword]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Program Files\7-Zip\7z.exe"
+          Arguments=" x *.* -p"
+          WorkingDirectory="C:\AM" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{24601743-CCA3-45A4-B9C9-EE926F4CA019}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{F851B379-7632-4B65-9CB5-2604EBAC3C2B}"
+        DTS:ObjectName="{F851B379-7632-4B65-9CB5-2604EBAC3C2B}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::FolderPath]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\AM\" />
+            <FEFEProperty
+              FileSpec="*.txt" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:DelayValidation="True"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{3BF88E7F-DD3A-45B7-8797-CAB31F0B190F}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="ADO NET Destination"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."SalesOrderDetail"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[W10-RKOCH3196-M.AM]"
+                      connectionManagerRefId="Package.ConnectionManagers[W10-RKOCH3196-M.AM]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SalesOrderID]"
+                          cachedDataType="i4"
+                          cachedName="SalesOrderID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SalesOrderID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SalesOrderID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SalesOrderDetailID]"
+                          cachedDataType="i4"
+                          cachedName="SalesOrderDetailID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SalesOrderDetailID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SalesOrderDetailID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[CarrierTrackingNumber]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CarrierTrackingNumber"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CarrierTrackingNumber]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierTrackingNumber]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[OrderQty]"
+                          cachedDataType="i4"
+                          cachedName="OrderQty"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[OrderQty]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[OrderQty]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ProductID]"
+                          cachedDataType="i4"
+                          cachedName="ProductID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ProductID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SpecialOfferID]"
+                          cachedDataType="i4"
+                          cachedName="SpecialOfferID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SpecialOfferID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SpecialOfferID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[UnitPrice]"
+                          cachedDataType="r4"
+                          cachedName="UnitPrice"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[UnitPrice]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[UnitPriceDiscount]"
+                          cachedDataType="i4"
+                          cachedName="UnitPriceDiscount"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[UnitPriceDiscount]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPriceDiscount]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[LineTotal]"
+                          cachedDataType="r4"
+                          cachedName="LineTotal"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LineTotal]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LineTotal]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[rowguid]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="rowguid"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[rowguid]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[rowguid]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ModifiedDate]"
+                          cachedDataType="dbTime2"
+                          cachedName="ModifiedDate"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ModifiedDate]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SalesOrderID]"
+                          dataType="i4"
+                          name="SalesOrderID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SalesOrderDetailID]"
+                          dataType="i4"
+                          name="SalesOrderDetailID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CarrierTrackingNumber]"
+                          dataType="wstr"
+                          length="25"
+                          name="CarrierTrackingNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[OrderQty]"
+                          dataType="i2"
+                          name="OrderQty" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ProductID]"
+                          dataType="i4"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SpecialOfferID]"
+                          dataType="i4"
+                          name="SpecialOfferID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[UnitPrice]"
+                          dataType="numeric"
+                          name="UnitPrice"
+                          precision="19"
+                          scale="255" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[UnitPriceDiscount]"
+                          dataType="numeric"
+                          name="UnitPriceDiscount"
+                          precision="19"
+                          scale="255" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LineTotal]"
+                          dataType="numeric"
+                          name="LineTotal"
+                          precision="38"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[rowguid]"
+                          dataType="guid"
+                          name="rowguid" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ModifiedDate]"
+                          dataType="dbTimeStamp"
+                          name="ModifiedDate" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CustomFlatManager]"
+                      connectionManagerRefId="Package.ConnectionManagers[CustomFlatManager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SalesOrderID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SalesOrderID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SalesOrderID]"
+                          name="SalesOrderID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SalesOrderDetailID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SalesOrderDetailID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SalesOrderDetailID]"
+                          name="SalesOrderDetailID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierTrackingNumber]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CarrierTrackingNumber]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierTrackingNumber]"
+                          name="CarrierTrackingNumber"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[OrderQty]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OrderQty]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[OrderQty]"
+                          name="OrderQty"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]"
+                          name="ProductID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SpecialOfferID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SpecialOfferID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SpecialOfferID]"
+                          name="SpecialOfferID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                          name="UnitPrice"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPriceDiscount]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitPriceDiscount]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPriceDiscount]"
+                          name="UnitPriceDiscount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LineTotal]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LineTotal]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LineTotal]"
+                          name="LineTotal"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[rowguid]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[rowguid]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[rowguid]"
+                          name="rowguid"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
+                          dataType="dbTime2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
+                          name="ModifiedDate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SalesOrderID]"
+                          dataType="i4"
+                          name="SalesOrderID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SalesOrderDetailID]"
+                          dataType="i4"
+                          name="SalesOrderDetailID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CarrierTrackingNumber]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CarrierTrackingNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OrderQty]"
+                          dataType="i4"
+                          name="OrderQty" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                          dataType="i4"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SpecialOfferID]"
+                          dataType="i4"
+                          name="SpecialOfferID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                          dataType="r4"
+                          name="UnitPrice" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitPriceDiscount]"
+                          dataType="i4"
+                          name="UnitPriceDiscount" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LineTotal]"
+                          dataType="r4"
+                          name="LineTotal" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[rowguid]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="rowguid" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
+                          dataType="dbTime2"
+                          name="ModifiedDate" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{7BCB72B8-6032-4CE3-895B-B4E4EE66668A}"
+          DTS:ObjectName="{7BCB72B8-6032-4CE3-895B-B4E4EE66668A}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Se conecta co la base da datos que tiene la infomacion"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8C39930B-5EAC-4379-937B-F59776F7E37A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Se conecta co la base da datos que tiene la infomacion"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Parameters"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[W10-RKOCH3196-M.AM]"
+                  connectionManagerRefId="Package.ConnectionManagers[W10-RKOCH3196-M.AM]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[Server]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Server]"
+                      length="50"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[Server]"
+                      name="Server"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[User]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[User]"
+                      length="50"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[User]"
+                      name="User"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[Password]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Password]"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[Password]"
+                      name="Password"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[FilePassword]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FilePassword]"
+                      length="50"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[FilePassword]"
+                      name="FilePassword"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Server]"
+                      dataType="wstr"
+                      length="50"
+                      name="Server" />
+                    <externalMetadataColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[User]"
+                      dataType="wstr"
+                      length="50"
+                      name="User" />
+                    <externalMetadataColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Password]"
+                      dataType="nText"
+                      name="Password" />
+                    <externalMetadataColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FilePassword]"
+                      dataType="wstr"
+                      length="50"
+                      name="FilePassword" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ID]"
+                      dataType="i4"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Server]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Server]"
+                      name="Server" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[User]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[User]"
+                      name="User" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Password]"
+                      dataType="nText"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Password]"
+                      name="Password" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FilePassword]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FilePassword]"
+                      name="FilePassword" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Se conecta co la base da datos que tiene la infomacion\Recordset Destination"
+              componentClassID="Microsoft.RecordsetDestination"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="Recordset Destination">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::Table</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Se conecta co la base da datos que tiene la infomacion\Recordset Destination.Inputs[Recordset Destination Input]"
+                  hasSideEffects="true"
+                  name="Recordset Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\Recordset Destination.Inputs[Recordset Destination Input].Columns[Server]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Server"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[Server]" />
+                    <inputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\Recordset Destination.Inputs[Recordset Destination Input].Columns[User]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="User"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[User]" />
+                    <inputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\Recordset Destination.Inputs[Recordset Destination Input].Columns[Password]"
+                      cachedDataType="nText"
+                      cachedName="Password"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[Password]" />
+                    <inputColumn
+                      refId="Package\Se conecta co la base da datos que tiene la infomacion\Recordset Destination.Inputs[Recordset Destination Input].Columns[FilePassword]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FilePassword"
+                      lineageId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output].Columns[FilePassword]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Se conecta co la base da datos que tiene la infomacion.Paths[ADO NET Source Output]"
+              endId="Package\Se conecta co la base da datos que tiene la infomacion\Recordset Destination.Inputs[Recordset Destination Input]"
+              name="ADO NET Source Output"
+              startId="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source.Outputs[ADO NET Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Se conecta con el FTP y trae los archivos comprimidos"
       DTS:CreationName="Microsoft.FtpTask"
       DTS:Description="FTP Task"
       DTS:DTSID="{8BD94FCA-1B12-4E88-9CF1-C33151C4B4CB}"
       DTS:ExecutableType="Microsoft.FtpTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="FTP Task"
+      DTS:ObjectName="Se conecta con el FTP y trae los archivos comprimidos"
       DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2017 RC1; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -472,26 +1215,26 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{E0C89FA6-D803-4BF1-B0BD-1EB071EA5F61}"
-      DTS:From="Package\Data Flow Task"
+      DTS:From="Package\Se conecta co la base da datos que tiene la infomacion"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Foreach Loop Container" />
+      DTS:To="Package\Coloca cada valor en una variable" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{79D628DD-468F-41AE-BD56-5D92407F3F56}"
-      DTS:From="Package\Foreach Loop Container"
+      DTS:From="Package\Coloca cada valor en una variable"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\FTP Task" />
+      DTS:To="Package\Se conecta con el FTP y trae los archivos comprimidos" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{7B66A1E8-6D1F-4BA1-894A-47A8F7E08599}"
-      DTS:From="Package\FTP Task"
+      DTS:DTSID="{4E316A87-F7CD-4A0F-B238-CB20078E8D7C}"
+      DTS:From="Package\Se conecta con el FTP y trae los archivos comprimidos"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Execute Process Task" />
+      DTS:To="Package\Extrae los archivos comprimidos" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -504,73 +1247,40 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="127,42"
-          Id="Package\FTP Task"
-          TopLeft="273,263" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
-          TopLeft="256,43" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="220,55"
-          Size="220,98"
+          PanelSize="268,55"
+          Size="268,98"
+          Id="Package\Coloca cada valor en una variable"
+          TopLeft="206,114" />
+        <NodeLayout
+          Size="237,42"
+          Id="Package\Extrae los archivos comprimidos"
+          TopLeft="213,347" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Foreach Loop Container\Data Flow Task"
+          TopLeft="33,23" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,93"
+          Size="205,136"
           Id="Package\Foreach Loop Container"
-          TopLeft="231,112" />
+          TopLeft="700,30" />
+        <NodeLayout
+          Size="348,42"
+          Id="Package\Se conecta co la base da datos que tiene la infomacion"
+          TopLeft="168,35" />
+        <NodeLayout
+          Size="346,42"
+          Id="Package\Se conecta con el FTP y trae los archivos comprimidos"
+          TopLeft="162,263" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="337.25,85">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="338.75,210">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Execute Process Task"
-          TopLeft="246,342" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="338.25,305">
+          TopLeft="341,77">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -590,24 +1300,116 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="337.5,212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="333.25,305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Foreach Loop Container\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="187,42"
-          Id="Package\Data Flow Task\Recordset Destination"
-          TopLeft="285,114" />
+          Size="186,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination"
+          TopLeft="317,151" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+          TopLeft="330,41" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="409,83">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68"
+              Start="0,0"
+              End="0,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Data Flow Task\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Se conecta co la base da datos que tiene la infomacion">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="166,42"
-          Id="Package\Data Flow Task\ADO NET Source"
+          Id="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source"
           TopLeft="292.5,20.5" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Se conecta co la base da datos que tiene la infomacion\Recordset Destination"
+          TopLeft="285,114" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
+          Id="Package\Se conecta co la base da datos que tiene la infomacion.Paths[ADO NET Source Output]"
           TopLeft="377,62.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -625,14 +1427,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\ADO NET Source">
+    design-time-name="Package\Se conecta co la base da datos que tiene la infomacion\ADO NET Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
